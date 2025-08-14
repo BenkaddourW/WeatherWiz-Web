@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Activités recommandées</title>
+</head>
+<body>
+    <h1>Activité que vous pouvez faire</h1>
+    
+    <% if (message) { %>
+        <h2>Pour "<%= condition %>" :</h2>
+        <p><%= message %></p>
+        <% if (activite) { %>
+            <p>Activité spécifique: <%= activite %></p>
+        <% } %>
+    <% } else { %>
+        <p>Aucune activité disponible pour "<%= condition %>"</p>
+    <% } %>
+    
+    <a href="/">Retour à l'accueil</a>
+</body>
+</html>

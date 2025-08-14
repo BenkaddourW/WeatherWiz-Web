@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Choix des conditions</title>
+</head>
+<body>
+    <h1>Sélectionnez une condition météo</h1>
+    
+    <form action="/getReponse" method="GET">
+        <label for="condition">Conditions disponibles :</label>
+        
+        <select name="condition" id="condition-list" required>
+            
+            <option value="" disabled selected>Choisissez une condition météo/saison :</option>
+            <% conditions.forEach((condition) => { %>
+                <option value="<%= condition %>"><%= condition %></option>
+            <% }); %>
+        </select>
+        
+        <button type="submit">Valider</button>
+    </form>
+</body>
+</html>
+    
+        
+
